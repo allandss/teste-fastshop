@@ -41,4 +41,8 @@ h3 {
     h2 {
         margin-top: 40px;
     }
+
+    .custom{
+        padding-top: 30px; 
+    }
 }
