@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="movies">   
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Filmes populares</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" *ngFor="let movie of itemList" (click)="goToMovieDetails(movie)">
+            <div class="item">
+              <div class="row"> 
+                <div class="col-4">
+                  <img [src]="movie.poster_path" class="card-img">
+                </div>
+                <div class="col-8">
+                  <div class="info">
+                    <div class="top">
+                      <h3 class="title"> {{ movie.title }}</h3>
+                      <h4 class="vote_average">{{movie.vote_average}} <span><i class="fas fa-star"></i></span></h4>
+                    </div>
+                    <h4 class="year"><i class="far fa-calendar-alt"></i> {{ movie.release_date | date: 'yyyy'}}</h4>
+                    <p>
+                      {{movie.overview}}
+                    </p>
+                  </div>
+                  <div class="more">
+                    <a [routerLink]="['/movie', movie.id]">Mais informações</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

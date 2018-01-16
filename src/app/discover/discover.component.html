@@ -1,0 +1,67 @@
+<div class="main-content">
+  <div class="movies">   
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Descobrir novos filmes</h2>
+        </div>
+      </div>
+      <div class="discover-filters">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="sel1">Ano</label>
+              <select [(ngModel)]="options.primary_release_year" placeholder="Year" (change)="getDiscover()" class="form-control"id="sel1">
+                <option *ngFor="let year of yearsList" [value]="year">{{year}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="sel2">Ordenar por</label>
+              <select [(ngModel)]="options.sort_by" placeholder="Sory By" (change)="getDiscover()" class="form-control" id="sel2">
+                <option *ngFor="let sort of sortByList" [value]="sort.key">{{sort.value}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3"> 
+            <div class="form-group">
+              <label for="sel3">Filtrar por gênero</label>
+              <select [(ngModel)]="options.with_genres" (change)="getDiscover()" class="form-control" id="sel3">
+                <option *ngFor="let genres of genresList" [value]="genres.id">{{genres.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let movie of itemList" (click)="goToMovieDetails(movie)">
+          <div class="item">
+            <div class="row"> 
+              <div class="col-4">
+                <img [src]="movie.poster_path" class="card-img">
+              </div>
+              <div class="col-8">
+                <div class="info">
+                  <div class="top">
+                    <h3 class="title"> {{ movie.title }}</h3>
+                    <h4 class="vote_average">{{movie.vote_average}} <span><i class="fas fa-star"></i></span></h4>
+                  </div>
+                  <h4 class="year"><i class="far fa-calendar-alt"></i> {{ movie.release_date | date: 'yyyy'}}</h4>
+                  <p>
+                    {{movie.overview}}
+                  </p>
+                </div>
+                <div class="more">
+                  <a [routerLink]="['/movie', movie.id]">Mais informações</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

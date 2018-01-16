@@ -1,1 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+body {
+    font-family: 'Source Sans Pro'
+}
+
+header {
+    background: #081c24;
+    width: 100%;
+    height: 110px;
+    padding-top: 15px;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img{
+    width: 90px;
+}
+
+.nav {
+    color: #fff;
+    float: left;
+    line-height: 80px;
+}
+
+.nav ul a {
+    color: #fff;
+}
+
+.nav ul a:hover{
+    text-decoration: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-weight: 600; 
+}
+
+footer {
+    background-image: url('https://www.themoviedb.org/static_cache/v4/footers_v2/TheMatrix-bb0fe85661c3587a83566343066fe017ffea28e9823a5ded42f74b599f7d12d6.jpg');
+    background-size: cover; 
+    min-height: 450px;
+    width: 100%;
+    color: #fff;
+    padding: 100px 0px;
+}
+
+.main-content {
+    background: #f4f4f4;
+}
+
+.movies {
+    padding: 50px 0px;
+}
+
+footer .logo img{
+    width: 120px;
+}
+
+footer .logo {
+    float: right;
+}
+
+footer .link {
+    position: relative;
+    border-color: #fff;
+    background-color: #fff;
+    color: #01d277;
+    font-size: 21px;
+    font-weight: bold;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+    text-transform: uppercase;
+    padding: 8px 15px 10px 15px;
+    text-align: right;
+    border-radius: 5px;
+    margin-top: 20px;
+    float: right;
+}
+
+footer ul {
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+footer ul .title {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+} 
+
+footer ul li {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.nav-bottom {
+    float: left;
+    width: 25%;
+    flex: 0 0 25%;
+}
+
+@media (max-width: 992px) {
+    footer ul .title {
+        font-size: 15px;
+    }
+    footer ul li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer ul .title {
+        font-size: 1.4em;
+    }
+    footer ul li {
+        font-size: 17px;
+    }
+
+    .nav-bottom {
+        float: none;
+        width: 100%;
+    }
+
+    footer .logo {
+        float: left;
+    }
+
+}
+

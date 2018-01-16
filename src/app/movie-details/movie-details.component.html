@@ -1,0 +1,24 @@
+<div class="main-content">
+  <div *ngIf="movie" class="movie-details">
+    <div [style.background-image]="'url(' + movie.backdrop_path + ')'" class="movie-img">
+      <div class="custom">
+        
+        <div (selectChange)="selectChange()">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <img [src]="movie.poster_path" class="img-fluid">
+              </div>
+              <div class="col-md-8">
+                <h2>{{movie.title}} <span>( {{ movie.release_date | date: 'yyyy'}} )</span></h2>
+                <h3>Sinopse</h3>
+                <p>{{movie.overview}}</p>
+                <p class="genres" *ngFor="let genre of movie.genres">{{genre.name}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
