@@ -27,7 +27,7 @@ h2 {
     font-size: 1.1em;
 }
 
-.item .col-4 {
+.item .col-5 {
     padding-right: 0px; 
 }
 
@@ -75,5 +75,33 @@ h2 {
 
 .card-img {
     width: 100%;
-    min-height: 262px;
+    min-height: 200px;
+}
+
+@media (max-width: 992px) {
+    .info p {
+        padding-top: 0px !important; 
+        float: left;
+        width: 100%;
+    }
+
+    .year {
+        display: none;
+    }
+
+    .item .info .title{
+        width: 68%;
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .item .info .vote_average{
+        width: 32%;
+    }
+
+    .item .more a  {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
 }

@@ -26,7 +26,7 @@ export class MoviesComponent implements OnInit {
     this.DBService.getGenres().subscribe((res: any) => this.genresList = res.genres);
     this.options = {};
     this.getDiscover();
-    this.titleService.setTitle('Descobrir novos filmes');
+    this.titleService.setTitle('Filmes populares');
   }
 
   ngOnInit() {
